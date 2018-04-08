@@ -23,6 +23,7 @@
 .byebug_history
 
 /.idea
+/.env*
 /public/assets
 
 # Ignore encrypted secrets key file.
