@@ -1,0 +1,71 @@
+python2.7 -m gensim.scripts.make_wiki enwiki-20130304-pages-articles.xml.bz2 output
+
+2013-04-06 20:08:55,417 : INFO : running /opt/python2.7/lib/python2.7/site-packages/gensim-0.8.6-py2.7.egg/gensim/scripts/make_wiki.py enwiki-20130304-pages-articles.xml.bz2 output
+
+2013-04-06 20:08:55,622 : INFO : adding document #0 to Dictionary(0 unique tokens)
+2013-04-06 20:13:38,426 : INFO : adding document #10000 to Dictionary(408407 unique tokens)
+2013-04-06 20:17:43,666 : INFO : adding document #20000 to Dictionary(582649 unique tokens)
+
+...
+
+2013-04-07 05:51:03,203 : INFO : adding document #4100000 to Dictionary(9238419 unique tokens)
+2013-04-07 05:52:31,093 : INFO : adding document #4110000 to Dictionary(9248983 unique tokens)
+2013-04-07 05:53:57,668 : INFO : adding document #4120000 to Dictionary(9261252 unique tokens)
+
+2013-04-07 05:54:24,458 : INFO : finished iterating over Wikipedia corpus of 4123523 documents with 2382805353 positions (total 13254845 articles, 2447696058 positions before pruning articles shorter than 50 words)
+2013-04-07 05:54:24,458 : INFO : built Dictionary(9266005 unique tokens) from 4123523 documents (total 2382805353 corpus positions)
+2013-04-07 05:54:30,507 : INFO : keeping 100000 tokens which were in no less than 20 and no more than 412352 (=10.0%) documents
+2013-04-07 05:54:36,949 : INFO : resulting dictionary: Dictionary(100000 unique tokens)
+2013-04-07 05:54:36,951 : INFO : storing corpus in Matrix Market format to output_bow.mm
+2013-04-07 05:54:36,952 : INFO : saving sparse matrix to output_bow.mm
+
+2013-04-07 05:54:37,595 : INFO : PROGRESS: saving document #0
+2013-04-07 05:59:31,775 : INFO : PROGRESS: saving document #10000
+2013-04-07 06:03:42,863 : INFO : PROGRESS: saving document #20000
+
+...
+
+2013-04-07 15:40:27,179 : INFO : PROGRESS: saving document #4100000
+2013-04-07 15:41:55,767 : INFO : PROGRESS: saving document #4110000
+2013-04-07 15:43:22,514 : INFO : PROGRESS: saving document #4120000
+
+2013-04-07 15:43:49,126 : INFO : finished iterating over Wikipedia corpus of 4123523 documents with 2382805353 positions (total 13254845 articles, 2447696058 positions before pruning articles shorter than 50 words)
+2013-04-07 15:43:49,126 : INFO : saved 4123523x100000 matrix, density=0.155% (638582147/412352300000)
+2013-04-07 15:43:49,146 : INFO : saving MmCorpus index to output_bow.mm.index
+2013-04-07 15:43:50,568 : INFO : saving dictionary mapping to output_wordids.txt
+2013-04-07 15:43:54,832 : INFO : loaded corpus index from output_bow.mm.index
+2013-04-07 15:43:54,832 : INFO : initializing corpus reader from output_bow.mm
+2013-04-07 15:43:54,832 : INFO : accepted corpus with 4123523 documents, 100000 features, 638582147 non-zero entries
+2013-04-07 15:43:54,833 : INFO : collecting document frequencies
+
+2013-04-07 15:43:54,847 : INFO : PROGRESS: processing document #0
+2013-04-07 15:44:15,568 : INFO : PROGRESS: processing document #10000
+2013-04-07 15:44:33,733 : INFO : PROGRESS: processing document #20000
+
+...
+
+2013-04-07 16:17:00,047 : INFO : PROGRESS: processing document #4100000
+2013-04-07 16:17:04,378 : INFO : PROGRESS: processing document #4110000
+2013-04-07 16:17:08,200 : INFO : PROGRESS: processing document #4120000
+
+2013-04-07 16:17:09,444 : INFO : calculating IDF weights for 4123523 documents and 100000 features (638582147 matrix non-zeros)
+2013-04-07 16:17:09,558 : INFO : storing corpus in Matrix Market format to output_tfidf.mm
+2013-04-07 16:17:09,558 : INFO : saving sparse matrix to output_tfidf.mm
+
+2013-04-07 16:17:09,568 : INFO : PROGRESS: saving document #0
+2013-04-07 16:18:05,641 : INFO : PROGRESS: saving document #10000
+2013-04-07 16:18:55,056 : INFO : PROGRESS: saving document #20000
+
+...
+
+2013-04-07 17:50:00,631 : INFO : PROGRESS: saving document #4100000
+2013-04-07 17:50:12,088 : INFO : PROGRESS: saving document #4110000
+2013-04-07 17:50:22,773 : INFO : PROGRESS: saving document #4120000
+
+2013-04-07 17:50:26,304 : INFO : saved 4123523x100000 matrix, density=0.155% (638582147/412352300000)
+2013-04-07 17:50:26,316 : INFO : saving MmCorpus index to output_tfidf.mm.index
+2013-04-07 17:50:27,690 : INFO : finished running make_wiki.py
+
+
+
+

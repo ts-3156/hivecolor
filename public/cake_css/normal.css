@@ -1,0 +1,409 @@
+@charset "utf-8";
+* {
+	margin:0;
+	padding:0;
+}
+
+ul,ol,li {
+	list-style: none;  //・などを消す
+}
+
+img {
+	margin: 0px;
+	padding: 0px;
+	border: 0;
+	vertical-align: bottom; //縦方向の位置を底合わせ
+}
+
+table {
+	border-collapse:collapse;
+	border:0px;
+	padding:0px;
+	margin:0px;
+}
+
+tr, td {
+	border:0px;
+	padding:0px;
+	margin:0px;
+}
+
+.clear {
+	height: 0px;
+	line-height: 0;
+	font-size: 0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+
+hr {
+	display: none;
+}
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+/*----------------------------------------------------------
+color
+-----------------------------------------------------------*/
+
+body, #header{
+	background-color: #fafbdc;
+}
+
+#layout{
+	background-color: #ffffff;
+}
+
+#footer{
+	background-color: #956527;
+}
+
+#copy_right{
+	background-color: #f5c409;
+}
+
+.box, .post_title, .each_post, .subtitle, .smalltitle, h4{
+	border-color: #58b3dc;
+	// border-color: #f5c409;
+}
+
+blockquote{
+	border-color: #eeeeee;
+}
+
+.with_border{
+	// border-color: #58b3dc;
+	border-color: #f5c409;
+}
+
+.comment_by_facebook{
+	border-color: #00229e;
+}
+
+.comment_by_twitter{
+	border-color: #00229e;
+	// border-color: #f5c409;
+}
+
+body{
+	color: #333333;
+}
+
+a, a:link, a:visited {
+	color: #0881bf;
+}
+
+a:hover, a:active {
+	color: #00229e;
+}
+
+table.social_button_table div a {
+	color: #333333;
+}
+
+.post_title, .post_title a {
+	color: #000000;
+}
+
+.post_date{
+	color: #777777;
+}
+
+#footer, #footer a{
+	color: #ffffff;
+}
+
+#copy_right{
+	color: #956527;
+}
+
+/*----------------------------------------------------------
+font-size
+-----------------------------------------------------------*/
+
+div#layout .toplink{
+	//font-size: 12px;
+}
+
+div#layout .post_title{
+	font-size: 24px;
+}
+
+div#layout .post_text{
+	font-size: 14px;
+}
+div#layout .post_date{
+	font-size: 12px;
+}
+div#layout .subtitle, h4{
+	font-size: 20px;
+}
+div#layout .smalltitle{
+	font-size: 16px;
+}
+div#layout .comment_by_twitter{
+	font-size: 12px;
+}
+
+#right_side .box{
+	font-size: 12px;
+}
+
+#right_side .box_title{
+	font-size: 12px;
+}
+
+#right_side .box_detail{
+	font-size: 11px;
+}
+
+div#layout #footer #list{
+	font-size: 14px;
+}
+
+div#layout #footer #copy_right{
+	font-size: 12px;
+}
+
+
+/*----------------------------------------------------------
+2.setup
+-----------------------------------------------------------*/
+body {
+	height: 100%;
+	text-align: center;
+}
+
+/*html:\66irst-child を付けると、MacのSafariに対する適用が可能*/
+html:\66irst-child body{
+	padding-left: 0;
+}
+
+a, a:link, a:visited {
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	text-decoration: none;
+}
+
+/*----------------------------------------------------------
+4.container
+-----------------------------------------------------------*/
+html {
+	height: 100%;
+}
+#layout {
+	width: 940px;
+	margin: 0 auto;
+	padding: 0px;
+	text-align: left;
+	position: relative;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+body > #wrapper {
+	//height: auto;
+}
+
+/*----------------------------------------------------------
+5.header
+-----------------------------------------------------------*/
+div#header {
+	overflow: hidden;
+	width: 940px;
+	height: 120px;
+	margin: 0;
+	padding: 0;
+}
+div#header h1 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 940px;
+	text-indent: -9999px;
+}
+
+div#header h2{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	width: 940px;
+	height: 120px;
+	background: url(/img/toplogo.png) left top no-repeat;
+}
+div#header h2 a{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	width: 940px;
+	height: 120px;
+	text-indent: -9999px;
+}
+
+/*----------------------------------------------------------
+7.content
+-----------------------------------------------------------*/
+
+div#contents {
+	float: left;
+	width: 700px;
+	height: auto;
+	margin: 0px;
+	overflow: hidden;
+}
+
+div#contents .each_post{
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 3px;
+	margin: 10px;
+	padding: 10px;
+}
+
+div#layout .post_title_table{
+	margin-top: 0px;
+}
+div#layout .post_title_table td{
+	vertical-align: bottom;
+}
+div#layout .post_title{
+	margin-top: 0px;
+	font-weight: bold;
+	border-left-width: 5px;
+	border-left-style: solid;
+	padding-left: 3px;
+}
+
+div#layout .post_text{
+	line-height: 150%;
+	margin: 0px;
+}
+
+div#layout h4{
+	border-left-width: 5px;
+	border-left-style: solid;
+	padding-left: 3px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+/*
+div#layout h4.subtitle{
+	border-left-width: 5px;
+	border-left-style: solid;
+	padding-left: 3px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+*/
+
+div#layout h5{
+	font-size: 16px;
+}
+
+
+div#layout .post_date{
+}
+
+div#layout blockquote {
+	width: 600px;
+	border-width: 1px;
+	border-style: solid;
+	border-radius : 3px;
+	background: url(/img/quote//blockquote_start2.png) no-repeat scroll top left;
+	background-color: #fafafa;
+	padding: 0px;
+	margin: 0px auto 0px auto;
+}
+
+div#layout blockquote p {
+	//border: solid 1px;
+	background: url(/img/quote/blockquote_end2.png) no-repeat scroll bottom right;
+	padding: 10px 30px 10px 30px;
+	margin: 0px;
+}
+/*----------------------------------------------------------
+8.side
+-----------------------------------------------------------*/
+#right_side_float {
+	float: right;
+	width: 240px;
+	height: auto;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+#right_side {
+	width: 240px;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	text-align: center;
+}
+#right_side .box{
+	// padding 12px, border 2px, margin 10px, 
+	width: 216px;
+	margin: 10px 10px 0px 0px;
+	padding: 3px 6px 3px 6px;
+	text-align: center;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 3px;
+}
+
+#right_side .box_title{
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+#right_side .box_detail{
+	text-align: left;
+	line-height: 120%;
+}
+
+#right_side div#popular_info_detail p{
+	margin: 0px 0px 10px 0px;
+}
+
+#right_side div#access_rank_info_detail p{
+	margin: 0px 0px 10px 0px;
+}
+
+#right_side div#new_info_detail p{
+	margin: 0px 0px 10px 0px;
+}
+
+#right_side div#twitter_info_detail p.tw_day{
+	margin: 0px 0px 10px 0px;
+}
+
+
+/*----------------------------------------------------------
+9.footer
+-----------------------------------------------------------*/
+
+div#layout #footer {
+	width: 940px;
+	padding: 0px;
+	margin: 0px;
+}
+div#layout #footer #list{
+	text-align: center;
+	padding: 3px 0px 3px 0px;
+}
+div#layout #footer #copy_right{
+	text-align: center;
+	padding: 3px 0px 3px 0px;
+}
+
+@media print {
+  #right_side_float, #header, .social_button_table, #comment_by_facebook_wrapper, #footer{
+    display: none;
+  }
+}

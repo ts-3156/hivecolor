@@ -23,6 +23,7 @@
 .byebug_history
 
 /.idea
+.DS_Store
 /.env*
 /public/assets
 
