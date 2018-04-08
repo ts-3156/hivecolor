@@ -1,0 +1,33 @@
+<div class="each_post">
+  <div style="position: relative;">
+    <div style="position: absolute; top: 0px; right: 0px;">
+      <%= render partial: 'posts/each_social_buttons', locals: {post: post} %>
+    </div>
+    <div style="position: absolute; top: 25px; right: 0px;">
+      <div class="post_date"><%= post.created_at.to_s(:post_title) %></div>
+    </div>
+  </div>
+
+  <div style="width: 520px; margin-bottom: 40px;">
+    <h3 class="post_title"><a href="<%= post_path(post) %>"><%= post.title %></a></h3>
+  </div>
+
+  <div class="clear"></div>
+
+  <div class="post_text" style="">
+    <%= post.body.split('<!-- content_cut -->')[0].html_safe %>
+    <br><p><a href="<%= post_path(post) %>">続きを読む！</a></p>
+  </div>
+
+  <%= render partial: 'posts/each_social_buttons', locals: {post: post} %>
+
+  <div class="clear"></div><%# これがないと下の要素にめり込む %>
+
+  <script type="text/javascript">
+      <!--
+      likeCount('fb_count_<%= post.id %>', '<%= post_url(post) %>');
+      // tweetCount('tweet_count_<%= post.id %>', '<%= post_url(post) %>');
+      hatebuCount('hatebu_count_<%= post.id %>', '<%= post_url(post) %>');
+      // -->
+  </script>
+</div><!-- each_post -->

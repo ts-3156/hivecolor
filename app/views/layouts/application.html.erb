@@ -1,16 +1,141 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hivecolor</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="ja">
+    <meta http-equiv="content-style-type" content="text/css">
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="keywords" content="ツイッター,ソーシャル">
+    <meta name="description" content="最近ツイッターで見かけた面白い情報を書くブログ。">
+
+    <%# stylesheet_link_tag '/cake_css/cake.generic.css', media: 'all' %>
+    <%= stylesheet_link_tag '/cake_css/normal.css', media: 'all' %>
+
+    <title><%= @title ? @title : 'Hive Color' %></title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="/cake_js/social_buttons.js"></script>
+
+    <script type="text/javascript">
+        <!--
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-13072051-6']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            //ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        // -->
+    </script>
+
+    <%# stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  <%= yield %>
+
+  <div id="fb-root"></div>
+  <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=900171283365563";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div id="layout">
+
+    <div id="header">
+      <h1>Hive Color</h1>
+      <h2><a href="/">Hive Color</a></h2>
+    </div>
+
+    <div id="contents">
+      <%= yield %>
+    </div>
+
+    <div id="right_side_float" style="">
+
+      <div class="clear"></div>
+
+      <div id="right_side" style="">
+
+        <div id="author_info" class="box">
+          <div id="author_title" class="box_title">著者プロフィール</div>
+          <div id="author_detail" class="box_detail">
+            Webサイトをいくつか作っています。
+            <div style="text-align: center;">
+              <div style="padding: 3px 0px 3px 0px;">
+                <a href="http://www.twitter.com/ts_3156" target="_blank"><img src="/cake_img/profile.png" width="120" height="188" alt="著者プロフィール"></a>
+              </div>
+            </div>
+            <div style="text-align: right; font-size: 10px;">
+              <a href="http://twitter.com/ts_3156" target="_blank">ツイッターはこちら</a></div>
+          </div><!-- author_detail -->
+        </div><!-- author_info -->
+
+        <div id="new_info" class="box">
+          <div id="new_info_title" class="box_title">新着記事</div>
+          <div id="new_info_detail" class="box_detail">
+            <div>
+              <%= render partial: 'posts/new_info', locals: {posts: @posts || []} %>
+            </div>
+            <div style="text-align: right; font-size: 10px;"><a href="/list">新しい記事一覧</a></div>
+          </div><!-- new_info_detail -->
+        </div><!-- new_info -->
+
+        <div id="popular_info" class="box">
+          <div id="popular_info_title" class="box_title">ソーシャルランキング</div>
+          <div id="popular_info_detail" class="box_detail">
+            <div>
+              <div>・2013/05/30</div><p><a href="/id/103">Lean Analytics: KPIにしてはいけない8つの指標</a> <span style="color: #ff0000;">349 users</span></p>
+              <div>・2011/12/20</div><p><a href="/id/19">楽天が大成功した理由とクラウドファンディングが成功しない理由</a> <span style="color: #ff0000;">174 users</span></p>
+              <div>・2013/05/26</div><p><a href="/id/100">ニコニコ動画のタグの傾向を見てみた</a> <span style="color: #ff0000;">77 users</span></p>
+              <div>・2013/05/28</div><p><a href="/id/101">ニコニコ動画のタグネットワークを描画してみた</a> <span style="color: #ff0000;">75 users</span></p>
+              <div>・2012/11/25</div><p><a href="/id/37">fluentdの簡単な使い方、設定方法一覧</a> <span style="color: #ff0000;">65 users</span></p>
+              <div>・2012/03/24</div><p><a href="/id/24">Android SDK r17で高速化されたAndroidエミュレータを動かす全手順</a> <span style="color: #ff0000;">59 users</span></p>
+              <div>・2011/12/19</div><p><a href="/id/18">とんQに提案メールを送ったらすっごい丁寧な返事が返ってきた！</a> <span style="color: #ff0000;">42 users</span></p>
+              <div>・2013/03/17</div><p><a href="/id/47">各種レコメンドアルゴリズムの特徴・計算方法まとめ</a> <span style="color: #ff0000;">35 users</span></p>
+              <div>・2013/05/29</div><p><a href="/id/102">ABテストを検定する</a> <span style="color: #ff0000;">34 users</span></p>
+              <div>・2013/03/14</div><p><a href="/id/43">Job Queueシステムを自分で設計するときに必要な設定項目メモ</a> <span style="color: #ff0000;">29 users</span></p>
+              <div>・2013/03/14</div><p><a href="/id/43">Job Queueシステムを自分で設計するときに必要な設定項目メモ</a> <span style="color: #ff0000;">29 users</span></p>
+            </div>
+          </div><!-- popular_info_detail -->
+        </div><!-- popular_info -->
+
+        <div id="access_rank_info" class="box">
+          <div id="access_rank_info_title" class="box_title">アクセス数ランキング</div>
+          <div id="access_rank_info_detail" class="box_detail">
+            <div>
+              <div>・2012/01/07</div><p><a href="/id/21">Android端末のGoogleアカウント同期機能まとめ【電話帳、Gmail、カレンダー、Picasa】</a></p>
+              <div>・2012/03/24</div><p><a href="/id/24">Android SDK r17で高速化されたAndroidエミュレータを動かす全手順</a></p>
+              <div>・2012/10/14</div><p><a href="/id/28">HTMLだけでツイッターを埋め込む方法</a></p>
+              <div>・2011/12/20</div><p><a href="/id/19">楽天が大成功した理由とクラウドファンディングが成功しない理由</a></p>
+              <div>・2012/10/10</div><p><a href="/id/27">絵師さんが参考にしているサイト だいたい200個まとめ</a></p>
+            </div>
+          </div><!-- access_rank_info_detail -->
+        </div><!-- access_rank_info -->
+
+      </div><!-- right_side -->
+    </div><!-- right_side_float -->
+
+    <div class="clear"></div>
+
+    <div id="footer">
+      <div id="list">
+        <a href="/">トップ</a> |
+        <a href="http://twitter.com/ts_3156" target="_blank">お問い合わせ</a>
+      </div>
+      <div id="copy_right">&copy;2011-2011 Shinohara. All rights reserved.</div>
+    </div><!-- footer -->
+
+  </div><!-- layout -->
+
   </body>
 </html>
