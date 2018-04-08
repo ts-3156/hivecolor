@@ -24,3 +24,6 @@
 
 /.idea
 /public/assets
+
+# Ignore encrypted secrets key file.
+config/secrets.yml.key
