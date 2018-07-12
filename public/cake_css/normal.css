@@ -235,7 +235,7 @@ div#header h2{
 	display: block;
 	width: 940px;
 	height: 120px;
-	background: url(/img/toplogo.png) left top no-repeat;
+	background: url(/cake_img/toplogo.png) left top no-repeat;
 }
 div#header h2 a{
 	position: absolute;
@@ -317,7 +317,7 @@ div#layout blockquote {
 	border-width: 1px;
 	border-style: solid;
 	border-radius : 3px;
-	background: url(/img/quote//blockquote_start2.png) no-repeat scroll top left;
+	background: url(/cake_img/quote//blockquote_start2.png) no-repeat scroll top left;
 	background-color: #fafafa;
 	padding: 0px;
 	margin: 0px auto 0px auto;
@@ -325,7 +325,7 @@ div#layout blockquote {
 
 div#layout blockquote p {
 	//border: solid 1px;
-	background: url(/img/quote/blockquote_end2.png) no-repeat scroll bottom right;
+	background: url(/cake_img/quote/blockquote_end2.png) no-repeat scroll bottom right;
 	padding: 10px 30px 10px 30px;
 	margin: 0px;
 }

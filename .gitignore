@@ -29,3 +29,6 @@
 
 # Ignore encrypted secrets key file.
 config/secrets.yml.key
+
+/posts.csv
+/posts.converted.csv
