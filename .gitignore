@@ -26,9 +26,13 @@
 .DS_Store
 /.env*
 /public/assets
+/config/database.yml
 
 # Ignore encrypted secrets key file.
 config/secrets.yml.key
 
 /posts.csv
 /posts.converted.csv
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
