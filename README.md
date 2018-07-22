@@ -1,5 +1,11 @@
 # README
 
+## Update SSL Certificate
+
+```sh
+sudo certbot-auto certonly --webroot -w /var/www/hivecolor/current/public -d hivecolor.com --email [email] --debug
+```
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
