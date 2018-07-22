@@ -3,7 +3,7 @@ var likeCount = function(_id ,_url) {
 	var pageURL = (_url) ? _url : location.href;
 	pageURL = encodeURIComponent(pageURL);
 	var callback_name = 'jsonp_' + _id;
-	var url = 'http://graph.facebook.com/' + pageURL + '?callback=' + callback_name;
+	var url = '//graph.facebook.com/' + pageURL + '?callback=' + callback_name;
 	//JSONの読み込み
 	var target = document.createElement('script');
 	target.charset = 'utf-8';
@@ -25,7 +25,7 @@ var tweetCount = function(_id ,_url) {
 	var pageURL = (_url) ? _url : location.href;
 	pageURL = encodeURIComponent(pageURL);
 	var callback_name = 'jsonp_' + _id;
-	var url = 'http://urls.api.twitter.com/1/urls/count.json?url=' + pageURL + '&callback=' + callback_name  + '&noncache=' + new Date();
+	var url = '//urls.api.twitter.com/1/urls/count.json?url=' + pageURL + '&callback=' + callback_name  + '&noncache=' + new Date();
 	//JSONの読み込み
 	var target = document.createElement('script');
 	target.charset = 'utf-8';
@@ -37,7 +37,7 @@ var tweetCount = function(_id ,_url) {
 		var elements = document.getElementsByClassName(_id);
 				var i = 0;
 				for(i = 0; i < elements.length; i++)
-					elements[i].innerHTML = '<a href="https://twitter.com/search?q=' + pageURL + '" target="_blank">' + data.count + '</a>';
+					elements[i].innerHTML = '<a href="//twitter.com/search?q=' + pageURL + '" target="_blank">' + data.count + '</a>';
 	};
 }
 
@@ -46,7 +46,7 @@ var hatebuCount = function (_id ,_url) {
 	var pageURL = (_url) ? _url : location.href;
 	pageURL = encodeURIComponent(pageURL);
 	var callback_name = 'jsonp_' + _id;
-	var url = 'http://api.b.st-hatena.com/entry.count?url=' + pageURL + '&callback=' + callback_name;
+	var url = '//api.b.st-hatena.com/entry.count?url=' + pageURL + '&callback=' + callback_name;
 	//JSONの読み込み
 	var target = document.createElement('script');
 	target.charset = 'utf-8';
