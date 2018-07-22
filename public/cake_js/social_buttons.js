@@ -46,7 +46,7 @@ var hatebuCount = function (_id ,_url) {
 	var pageURL = (_url) ? _url : location.href;
 	pageURL = encodeURIComponent(pageURL);
 	var callback_name = 'jsonp_' + _id;
-	var url = '//api.b.st-hatena.com/entry.count?url=' + pageURL + '&callback=' + callback_name;
+	var url = 'http://api.b.st-hatena.com/entry.count?url=' + pageURL + '&callback=' + callback_name;
 	//JSONの読み込み
 	var target = document.createElement('script');
 	target.charset = 'utf-8';
