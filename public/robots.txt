@@ -1,1 +1,1 @@
-Sitemap: http://www.hivecolor.com/sitemap.xml
+Sitemap: http://hivecolor.com/sitemap.xml
