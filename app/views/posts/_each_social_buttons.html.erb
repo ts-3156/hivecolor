@@ -1,10 +1,10 @@
 <table class="social_button_table" align="right"><tr>
-  <td><div style="margin-left: 10px;"><a href="http://twitter.com/share?text=<%= URI.escape(post.title) %>&amp;url=<%= "#{post_url(post)}" %>" target="_blank"><img src="/cake_img/social_buttons/tweet_button2.png" width="16" height="16" alt="ツイッターに投稿する"></a></div></td>
+  <td><div style="margin-left: 10px;"><a href="//twitter.com/share?text=<%= URI.escape(post.title) %>&amp;url=<%= "#{post_url(post)}" %>" target="_blank"><img src="/cake_img/social_buttons/tweet_button2.png" width="16" height="16" alt="ツイッターに投稿する"></a></div></td>
   <td><div style="margin-left: 2px;" class="tweet_count_<%= post.id %>"></div></td>
 
-  <td><div style="margin-left: 10px;"><a href="http://www.facebook.com/sharer.php?u=<%= "#{post_url(post)}" %>" target="_blank"><img src="/cake_img/social_buttons/fb_like_button2.png" width="16" height="16" alt="Facebookに投稿する"></a></div></td>
+  <td><div style="margin-left: 10px;"><a href="//www.facebook.com/sharer.php?u=<%= "#{post_url(post)}" %>" target="_blank"><img src="/cake_img/social_buttons/fb_like_button2.png" width="16" height="16" alt="Facebookに投稿する"></a></div></td>
   <td><div style="margin-left: 2px;" class="fb_count_<%= post.id %>"></div></td>
 
-  <td><div style="margin-left: 10px;"><a href="http://b.hatena.ne.jp/add?mode=confirm&amp;url=<%= "#{post_url(post)}" %>" target="_blank"><img src="/cake_img/social_buttons/hatena.png" width="16" height="16" alt="はてなでブックマークする"></a></div></td>
+  <td><div style="margin-left: 10px;"><a href="//b.hatena.ne.jp/add?mode=confirm&amp;url=<%= "#{post_url(post)}" %>" target="_blank"><img src="/cake_img/social_buttons/hatena.png" width="16" height="16" alt="はてなでブックマークする"></a></div></td>
   <td><div style="margin-left: 2px;" class="hatebu_count_<%= post.id %>"></div></td>
 </tr></table>
