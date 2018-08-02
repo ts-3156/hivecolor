@@ -24,7 +24,16 @@ namespace :posts do
 
     CSV.parse(text) do |line|
       attrs = columns.map.with_index {|name, i| [name, line[i].chomp]}.to_h.transform_values {|v| null_values.include?(v.to_s) ? nil : v.to_s}
-      records << Post.new(attrs)
+      post = Post.new(attrs)
+
+      if post.body.include? '<!-- content_cut -->'
+        post.summary, post.body = post.body.split('<!-- content_cut -->')
+      else
+        puts "Invalid #{post.title}"
+        post.summary = post.body
+      end
+
+      records << post
     end
 
     ApplicationRecord.transaction do
