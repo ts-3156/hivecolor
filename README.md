@@ -1,5 +1,7 @@
 # README
 
+This application is migrated from CakePHP to Rails.
+
 ## Update SSL Certificate
 
 ```sh
