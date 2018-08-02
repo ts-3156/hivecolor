@@ -1,5 +1,4 @@
 <div class="each_post">
-
   <div style="position: relative;">
     <div style="position: absolute; top: 0px; right: 0px;">
       <%= render partial: 'posts/social_buttons', locals: {post: post} %>
@@ -16,16 +15,13 @@
   <div class="clear"></div>
 
   <div class="post_text" style="">
-    <%= post.body.html_safe %>
+    <%= post.summary.html_safe %>
+    <br><p><a href="<%= post_path(post) %>">続きを読む！</a></p>
   </div>
 
   <%= render partial: 'posts/social_buttons', locals: {post: post} %>
 
   <div class="clear"></div><%# これがないと下の要素にめり込む %>
-
-  <div id="comment_by_facebook_wrapper"><%# これがない印刷時に非表示にできない %>
-    <div style="border-width: 1px; border-style: solid; border-radius: 3px; margin-top: 10px; padding: 28px;" class="fb-comments comment_by_facebook" data-href="<%= post_url(post) %>" data-width="600" data-numposts="5"></div>
-  </div>
 
   <script type="text/javascript">
       <!--
@@ -34,5 +30,4 @@
       hatebuCount('hatebu_count_<%= post.id %>', '<%= post_url(post) %>');
       // -->
   </script>
-
 </div><!-- each_post -->
