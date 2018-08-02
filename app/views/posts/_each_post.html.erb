@@ -2,7 +2,7 @@
 
   <div style="position: relative;">
     <div style="position: absolute; top: 0px; right: 0px;">
-      <%= render partial: 'posts/each_social_buttons', locals: {post: post} %>
+      <%= render partial: 'posts/social_buttons', locals: {post: post} %>
     </div>
     <div style="position: absolute; top: 25px; right: 0px;">
       <div class="post_date"><%= post.created_at.to_s(:post_title) %></div>
@@ -19,7 +19,7 @@
     <%= post.body.html_safe %>
   </div>
 
-  <%= render partial: 'posts/each_social_buttons', locals: {post: post} %>
+  <%= render partial: 'posts/social_buttons', locals: {post: post} %>
 
   <div class="clear"></div><%# これがないと下の要素にめり込む %>
 
