@@ -8,7 +8,7 @@ end
 gem 'dotenv-rails'
 gem 'devise'
 gem 'activerecord-import'
-gem 'ffi', '1.9.21' # https://github.com/ffi/ffi/issues/640
+gem 'ffi', '1.9.24' # https://github.com/ffi/ffi/issues/640
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
